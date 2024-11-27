@@ -1,0 +1,76 @@
+.edit-page {
+    margin-left: 200px;
+    color: black;
+}
+.search-container {
+    
+    float: none;
+    padding: auto;
+}
+.search-container input{
+    background: rgb(168, 164, 164);
+    height: 40px;
+    width: 300px;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-family:"Lato", sans-serif ;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    font-size: 17px;
+    float: left;
+    border: none;
+    height: 40px;
+    width: 70px;
+    background-color: #9895c5;
+    cursor: pointer;
+    color: white;
+}
+
+.search-container input:hover {
+    color: grey;
+}
+
+.edit-form form {
+    margin-top: 100px;
+}
+.edit-form form button {
+    color: white;
+    font-size: large;
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #9895c5;
+
+}
+.edit-form form input{
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(227, 222, 222);
+    font-family: "Lato", sans-serif;
+    border: none;
+}
+.sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 160px;
+    background-color: #9895c5;
+    padding-top: 15px;
+
+}
+.sidebar a {
+    padding: 15px 8px 6px 16px;
+    font-size: 20px;
+    color: rgb(229, 225, 225);
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar a:hover {
+    color: white;
+}

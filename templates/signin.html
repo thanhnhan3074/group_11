@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}?v=1.0">
+    <title>Sign in</title>
+</head>
+<body>
+   
+        <div class="signin-container">
+            <div class="lottie-signin">
+                <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"
+                    ></script>
+                <dotlottie-player
+                    src="https://lottie.host/6123b224-70a2-410e-b648-4e83931ea915/hFU1BLOmu9.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+                </div>
+            
+            <form action="{{ url_for('return_signin') }}" method="POST">
+        <input type="username" placeholder="username" id="Username" name="Username" class="Username-field"><br>
+                <div class="msg">{{ msg }}</div>
+                <input type="password" placeholder="password" id="Password" name="Password" class="Password-field" ><br>
+                <div class="Signin-button" type="submit">
+                    <button class = "submit-btn" type="submit">Sign in</button>
+                </div><br>
+                
+                <div class="authentication-selection">
+                    <div class="remember-user">
+                        <input type="checkbox" size="13px" name="checkbox-checked" />
+                        Remember me
+                    </div>
+
+                    <div class="forgot-password">
+                         <a href="">Forgot password ?</a>
+                    </div>
+                </div><br>
+                <hr class="rounded" width="200px">
+
+                <div class="signup-button" >
+                    <a href="/signup">Sign up</a>
+                </div>
+
+
+                
+            </form>
+            
+                
+        </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myInput");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+        </script>
+    
+</body>
+</html>

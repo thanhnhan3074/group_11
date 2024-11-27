@@ -1,0 +1,36 @@
+{% extends "home.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock %}
+
+{% block title %}<title>Dashboard</title>{% endblock %}
+{% block content %}
+<div class="dashboard-page">
+    <p>This is Dashboard</p>
+    <table id="dashboard-table">
+        <tr>
+            <th>
+                User.ID
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Role
+            </th>
+        </tr>
+        {% for obj in users %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.username }}</td>
+            <td>{{ obj.email }}</td>
+            <td>{{ obj.role }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+    <title>Sign in</title>
+</head>
+<body>
+   
+        <div class="signin-container">
+            <div class="lottie-signin">
+                <script
+                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                type="module"
+                    ></script>
+                <dotlottie-player
+                    src="https://lottie.host/6123b224-70a2-410e-b648-4e83931ea915/hFU1BLOmu9.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 300px; height: 300px"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+                </div>
+            
+            <form action="{{ url_for('return_signup') }}" method="post">
+                <div class="msg">{{ msg }}</div>
+                <input type="username" placeholder="Username" id="new Username" name="new Username" class="Username-field"><br>
+                <input type="password" placeholder="New password" id="new Password" name="new Password" class="Password-field" ><br>
+                <input type="email" placeholder="@gmail.com" id="email" name="email" class="email-field" ><br>
+                <div class="Signup-button">
+                    <button class = "submit-btn" type="submit">Sign up</button> 
+                </div><br>
+                
+               
+                <div class="signin-view">
+                    <a href="/signin">Already have account</a>
+                </div>
+
+                
+
+
+                
+            </form>
+        </div>
+    
+</body>
+</html>
